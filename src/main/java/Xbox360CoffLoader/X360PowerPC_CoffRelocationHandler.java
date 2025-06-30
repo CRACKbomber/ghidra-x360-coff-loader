@@ -65,8 +65,7 @@ public class X360PowerPC_CoffRelocationHandler implements CoffRelocationHandler 
 	@Override
 	public boolean canRelocate(CoffFileHeader fileHeader) {
 		// 0x01f2 == x360 PPC COFF
-		return false; // TODO(crack): Test this mf
-		// return fileHeader.getMachine() == 0x01f2;
+		return fileHeader.getMachine() == 0x01f2;
 	}
 
 	@Override
